@@ -1,25 +1,53 @@
-# network-sniffer
-Basic Network Sniffer using Python and Scapy
-from scapy.all import sniff, IP, TCP, UDP
+# Network Sniffer
 
-def process_packet(packet):
-    if packet.haslayer(IP):
-        ip = packet[IP]
+Basic Network Sniffer using Python and Scapy to capture and analyze network packets.
 
-        if packet.haslayer(TCP):
-            protocol = "TCP"
-        elif packet.haslayer(UDP):
-            protocol = "UDP"
-        else:
-            protocol = "OTHER"
+---
 
-        log = f"{protocol} | {ip.src} → {ip.dst}\n"
+## 📌 Features
 
-        # print on screen
-        print(log)
+* Capture live network packets
+* Detect TCP / UDP protocols
+* Display source and destination IP
+* Save logs into a file
 
-        # save to file
-        with open("log.txt", "a") as f:
-            f.write(log)
+---
 
-sniff(prn=process_packet, store=False)
+## ⚙️ Installation
+
+1. Clone the repository:
+   git clone https://github.com/Kamal-Youtuber/network-sniffer.git
+
+2. Navigate to the project folder:
+   cd network-sniffer
+
+3. Install required dependencies:
+   pip3 install scapy
+
+---
+
+## 🚀 Usage
+
+Run the tool using:
+
+sudo python3 NetworkSniffer.py
+
+---
+
+## 🛑 Stop the Program
+
+Press CTRL + C
+
+---
+
+## 📂 Project Structure
+
+NetworkSniffer.py → Main tool file
+README.md → Documentation
+
+---
+
+## ⚠️ Disclaimer
+
+This tool is developed for educational purposes only. Do not use it for illegal activities.
+
