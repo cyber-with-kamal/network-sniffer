@@ -53,4 +53,4 @@ This tool is developed for educational purposes only. Do not use it for illegal 
 
 ## 📸 Output Screenshot
 
-![Output](Result.png)
+<img src="Result.png" width="600"/>
